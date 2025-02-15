@@ -17,7 +17,7 @@ public class CadastroCargo {
         System.out.println("Digite o departamento do cargo: ");
         String departamento = scanner.nextLine();
 
-        System.out.println("Digite o salário do cargo: ");
+        System.out.println("Digite o salário do cargcadastroo: ");
         double salario = scanner.nextDouble();
         scanner.nextLine();
 

@@ -1,0 +1,63 @@
+
+# 💻Projeto: Cadastro de Pessoas e Cargos em Java
+
+Este é um projeto simples desenvolvido em Java para cadastrar pessoas e atribuir cargos a elas. O objetivo principal é praticar conceitos de programação orientada a objetos e manipulação de dados em Java, como listas e classes inter-relacionadas.
+
+
+## ⚙️Funcionalidades
+
+- **Cadastro de Pessoas**:
+  - Nome
+  - Idade
+  - CPF
+  - Sexo
+  - Cargo (associado à pessoa)
+  
+- **Cadastro de Cargos**:
+  - Função
+  - Departamento
+  - Status (Ativo/Inativo)
+  
+- **Associação entre Pessoas e Cargos**:
+  - Cada pessoa tem um cargo atribuído.
+
+- **Métodos de Cadastro e Exibição**:
+  - Métodos para cadastro e visualização de pessoas e cargos.
+
+
+## 🛠️Tecnologias Utilizadas
+
+- **Java**: Linguagem de programação usada para o desenvolvimento da aplicação.
+- **Scanner**: Para a entrada de dados pelo usuário.
+- **ArrayList**: Para armazenar os dados de pessoas e cargos em listas dinâmicas.
+
+
+## ⏯️Como Rodar o Projeto
+
+1. Clone o repositório para a sua máquina local:
+   ```bash
+   git clone https://github.com/dievit/pessoas-e-cargos-java.git
+
+2. Abra o projeto na sua IDE preferida, como IntelliJ IDEA.
+
+3. Compile e execute a classe Main.java para rodar a aplicação.
+
+4. Siga as instruções que aparecerão no console para cadastrar pessoas e cargos.
+
+## ⭐Exemplo de Uso
+Ao rodar o programa, o sistema solicitará informações sobre a pessoa, como nome, idade, CPF, sexo e cargo. Exemplo:
+
+```bash
+Digite o nome da pessoa:
+John Doe
+Digite a idade da pessoa:
+30
+Digite o CPF da pessoa:
+123.456.789-00
+Digite o sexo da pessoa:
+M
+Digite o cargo da pessoa:
+Gerente de TI
+
+
+Após inserir as informações, o programa exibirá o cadastro realizado.

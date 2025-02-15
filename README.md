@@ -3,6 +3,15 @@
 
 Este é um projeto simples desenvolvido em Java para cadastrar pessoas e atribuir cargos a elas. O objetivo principal é praticar conceitos de programação orientada a objetos e manipulação de dados em Java, como listas e classes inter-relacionadas.
 
+Este projeto está dividido em fases de implantação.
+
+| Fase | Descrição | Detalhamento |
+| --- | --- | --- |
+| 1 | Desenvolvimento da lógica e implementação do código. | Desenvolvimento de toda parte lógica necessária para transformação em código JAVA, definição dos métodos, classes e atributos. |
+| 2 | Implementação do banco de dados (MongoDB ou MySQL a definir). | Definição da escolha de qual banco de dados utilizar, criação do modelo relacional, definição dos elementos e atributos que serão utilizados no desenvolvimento do banco de dados. |
+| 3 | Implementação de interface gráfica utilizando JavaFX. | Definição das telas, definição e implementação da lógica a ser utilizada, definição da identidade visual da interface com o usuário. |
+
+<br>
 
 ## ⚙️Funcionalidades
 

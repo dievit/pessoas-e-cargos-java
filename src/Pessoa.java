@@ -25,6 +25,18 @@ public class Pessoa {
         }
     }
 
+    public Cargo getCargo() {
+        return this.cargo;
+    }
+
+    public void setCargo(Cargo cargo) {
+        if (cargo != null) {
+            this.cargo = cargo;
+        } else {
+            System.out.println("Cargo inválido");
+        }        this.cargo = cargo;
+    }
+
     public int getIdade() {
         return this.idade;
     }

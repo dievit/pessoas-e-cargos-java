@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class CadastroPessoas {
     List<Pessoa> pessoas = new ArrayList<Pessoa>();
 
-
     public void cadastrarPessoa() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o nome da pessoa: ");
@@ -24,4 +23,31 @@ public class CadastroPessoas {
         Pessoa pessoa = new Pessoa(nome, idade, cpf, sexo, null);
         pessoas.add(pessoa);
     }
+
+    public void listarPessoas() {
+        if (pessoas.isEmpty()) {
+            System.out.println("Nenhuma pessoa cadastrada");
+        } else {
+            return;
+        }
+        System.out.println("Lista de Pessoas:");
+        for (Pessoa p : pessoas) {
+            System.out.println("Nome: " + p.getNome() + ", Idade: " + p.getIdade() +
+                    ", CPF: " + p.getCpf() + ", Sexo: " + p.getSexo() + ", Cargo: " +
+                    (p.getCargo() != null ? p.getCargo().getFuncao() : "Sem cargo"));
+        }
+    }
+
+    public void atribuirCargo(String cpf, Cargo cargo) {
+        for (Pessoa p : pessoas) {
+            if (p.getCpf().equals(cpf)) {
+                p.setCargo(cargo);
+                System.out.println("Cargo atribuído com sucesso!");
+                return;
+            }
+        }
+        System.out.println("Pessoa não encontrada!");
+    }
+
+
 }

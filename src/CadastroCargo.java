@@ -24,4 +24,18 @@ public class CadastroCargo {
         Cargo cargo = new Cargo(nome, funcao, departamento, true, salario);
         cargos.add(cargo);
     }
+
+    public void listarCargos() {
+        if (cargos.isEmpty()) {
+            System.out.println("Nenhum cargo encontrado!");
+        } else {
+            return;
+        }
+        System.out.println("Lista de Cargos:");
+        for (Cargo c: cargos) {
+            System.out.println("Nome: " + c.getNome() + ", Função: " + c.getFuncao() +
+                    ", Departamento: " + c.getDepartamento() + ", Status: " + c.getStatusString() +
+                    ", Salário: " + c.getSalario());
+        }
+    }
 }

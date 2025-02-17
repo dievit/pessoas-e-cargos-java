@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CadastroCargo {
-    List<Cargo> cargos = new ArrayList<Cargo>();
+    private List<Cargo> cargos = new ArrayList<Cargo>();
 
 
     public void cadastrarCargo() {
@@ -25,6 +25,10 @@ public class CadastroCargo {
         cargos.add(cargo);
     }
 
+    public List<Cargo> getCargos() {
+        return cargos;
+    }
+
     public void listarCargos() {
         if (cargos.isEmpty()) {
             System.out.println("Nenhum cargo encontrado!");
@@ -37,5 +41,14 @@ public class CadastroCargo {
                     ", Departamento: " + c.getDepartamento() + ", Status: " + c.getStatusString() +
                     ", Salário: " + c.getSalario());
         }
+    }
+
+    public Cargo findCargoByName(String nomeCargo) {
+        for (Cargo cargo: cargos) {
+            if (cargo.getNome().equals(nomeCargo)) {
+                return cargo;
+            }
+        }
+        return null;
     }
 }

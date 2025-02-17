@@ -37,6 +37,15 @@ public class Pessoa {
         }        this.cargo = cargo;
     }
 
+    public void exibirPessoa() {
+        System.out.println("***INFORMAÇÕES DO COLABORADOR***");
+        System.out.println("Nome :" + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("CPF: " +cpf);
+        System.out.println("Sexo: " + sexo);
+        System.out.println("Cargo: " + (cargo != null ? cargo.getNome() : "Sem cargo"));
+    }
+
     public int getIdade() {
         return this.idade;
     }

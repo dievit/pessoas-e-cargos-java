@@ -20,8 +20,28 @@ public class CadastroPessoas {
         System.out.println("Digite o sexo da pessoa: ");
         char sexo = scanner.next().charAt(0);
 
-        Pessoa pessoa = new Pessoa(nome, idade, cpf, sexo, null);
+        System.out.println("Deseja atribuir um cargo à pessoa? (s/n): ");
+        String resposta = scanner.nextLine();
+        Cargo cargo = null;
+        if (resposta.equalsIgnoreCase("s")) {
+            CadastroCargo cadastroCargo = new CadastroCargo();
+            while (cargo == null) {
+                System.out.println("Digite o nome do cargo: ");
+                String nomeCargo = scanner.nextLine();
+                cargo = cadastroCargo.findCargoByName(nomeCargo);
+                if (cargo == null) {
+                    System.out.println("Cargo não encontrado!");
+                }
+            }
+
+        }
+
+        Pessoa pessoa = new Pessoa(nome, idade, cpf, sexo, cargo);
         pessoas.add(pessoa);
+    }
+
+    public List<Pessoa> getPessoas() {
+        return pessoas;
     }
 
     public void listarPessoas() {

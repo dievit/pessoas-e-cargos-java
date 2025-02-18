@@ -10,6 +10,8 @@ public class TerminalMenu {
     }
 
     public void displayMenu() {
+        CadastroCargo cadastroCargo = new CadastroCargo();
+        CadastroPessoas cadastroPessoas = new CadastroPessoas();
         while (choice != 4) {
             printMenu();
             choice = scanner.nextInt();
@@ -18,21 +20,30 @@ public class TerminalMenu {
             switch (choice) {
                 case 1:
                     System.out.println("Cadastrar Pessoa");
+                    cadastroPessoas.cadastrarPessoa();
                     break;
                 case 2:
                     System.out.println("Listar Pessoas");
+                    cadastroPessoas.listarPessoas();
                     break;
                 case 3:
                     System.out.println("Cadastrar Cargo");
+                    cadastroCargo.cadastrarCargo();
                     break;
                 case 4:
+                    System.out.println("Listar Cargos");
+                    cadastroCargo.listarCargos();
+                    break;
+                case 5:
                     System.out.println("Saindo...");
                     break;
+
                 default:
                     System.out.println("Opção inválida");
                     break;
             }
         }
+        scanner.close();
     }
 
     private void printMenu() {

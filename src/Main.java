@@ -14,29 +14,5 @@ public class Main {
            pessoa.exibirPessoa();
        }
 
-        cadastroCargo.listarCargos();
-        cadastroPessoas.listarPessoas();
-
-        System.out.println("Digite o CPF da pessoa que deseja atribuir um cargo: ");
-        String cpf = scanner.nextLine();
-
-        System.out.println("Digite o nome do cargo que deseja atribuir: ");
-        String nomeCargo = scanner.nextLine();
-
-        Cargo cargo = null;
-        for (Cargo c: cadastroCargo.getCargos()) {
-            if (c.getNome().equals(nomeCargo)) {
-                cargo = c;
-                break;
-            }
-        }
-
-        if (cargo == null) {
-            System.out.println("Cargo não encontrado!");
-        } else {
-            cadastroPessoas.atribuirCargo(cpf, cargo);
-        }
-
-        cadastroPessoas.listarPessoas();
     }
 }

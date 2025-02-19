@@ -33,13 +33,16 @@ public class CadastroCargo {
         if (cargos.isEmpty()) {
             System.out.println("Nenhum cargo encontrado!");
         } else {
-            return;
-        }
-        System.out.println("Lista de Cargos:");
-        for (Cargo c: cargos) {
-            System.out.println("Nome: " + c.getNome() + ", Função: " + c.getFuncao() +
-                    ", Departamento: " + c.getDepartamento() + ", Status: " + c.getStatusString() +
-                    ", Salário: " + c.getSalario());
+            System.out.println("Lista de Cargos:");
+            System.out.println("\n");
+            for (Cargo c : cargos) {
+                System.out.println("Nome: " + c.getNome());
+                System.out.println("Função: " + c.getFuncao());
+                System.out.println("Departamento: " + c.getDepartamento());
+                System.out.println("Status: " + c.getStatusString());
+                System.out.println("Salário: " + c.getSalario());
+                System.out.println("\n");
+            }
         }
     }
 

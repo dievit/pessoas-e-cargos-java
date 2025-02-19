@@ -10,9 +10,9 @@ public class TerminalMenu {
     }
 
     public void displayMenu() {
-        CadastroCargo cadastroCargo = new CadastroCargo();
         CadastroPessoas cadastroPessoas = new CadastroPessoas();
-        while (choice != 4) {
+        CadastroCargo cadastroCargo = new CadastroCargo();
+        while (choice != 5) {
             printMenu();
             choice = scanner.nextInt();
             scanner.nextLine();
@@ -50,7 +50,8 @@ public class TerminalMenu {
         System.out.println("1 - Cadastrar Pessoa");
         System.out.println("2 - Listar Pessoas");
         System.out.println("3 - Cadastrar Cargo");
-        System.out.println("4 - Sair");
+        System.out.println("4 - Listar Cargos");
+        System.out.println("5 - Sair");
         System.out.println("Digite a opção desejada: ");
     }
 }
